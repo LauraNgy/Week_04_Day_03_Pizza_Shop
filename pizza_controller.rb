@@ -48,7 +48,7 @@ end
 
 post '/pizza-orders/:id' do
   @order = PizzaOrder.new(params).update()
-  redirect to "/pizza-orders/#{params['id']}"
+  redirect to "/pizza-orders"
 end
 
 # DELETE

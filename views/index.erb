@@ -2,6 +2,10 @@
 
 <ul>
   <% @orders.each  do |order| %>
-    <li><%= order.pretty_name %>: <%= order.quantity %>, <%= order.topping %> </li>
+    <li>
+    <%= order.pretty_name %>: <%= order.quantity %>, <%= order.topping %>
+  </li>
+  <button><a href="/pizza-orders/<%= order.id %>/edit">Edit</a></button>
+  <button><a href="/pizza-orders/<%= order.id %>/delete">Delete</a></button>
   <% end %>
 </ul>
